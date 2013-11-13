@@ -4,13 +4,15 @@ Objective:
  
 Inputs:
 ---------------------
-  1) Username
-  2) API-Key
+  - Username
+  - API-Key
 
 Outputs:
 ---------------------
-  Cloud Server List
-   - Cloud Server Name
-   - Datacenter
+  - Username submitted
+  - Errors
 
-   - IP Address
+  - Cloud Server List
+    - Cloud Server Name
+    - Datacenter
+    - IP Address
