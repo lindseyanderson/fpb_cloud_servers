@@ -4,7 +4,9 @@
   <h1>{{username}} </h1>
 
   {% for server in servers %}
-    <table class="table table-hover">
+    <button type="submit" class="btn btn-default btn-block" data-toggle="collapse" data-target="#{{server.name}}"><h4>{{server.name}}</h4></button>
+    <div id="{{server.name}}" class="collapse out">
+    <table class="table table-hover"> 
       <tr class="success"> 
         <td>Server Name</td><td>{{server.name}}</td>
       </tr>
@@ -19,6 +21,12 @@
         {% endfor %}
       {% endfor %}
     </table>
+    </div>
   {% endfor %}
+  <script>
+    $(document).ready(function() {
+      document.getElementsByClassName("collapse")[0].className = "collapse in";
+    });
+  </script>
 {% endblock %}
 
