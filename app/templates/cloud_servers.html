@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {{username}} <br>
+
+  {% for server in servers %}
+    <table>
+      <tr> 
+        <td>Server Name</td><td>{{server.name}}</td>
+      </tr>
+      <tr>
+        <td>Server ID</td><td>{{server.id}}</td>
+      <tr>
+      {% for iface in server.networks %}
+        {% for ip in server.networks[iface] %}
+          <tr>
+            <td>{{iface}} IP</td><td>{{ip}}</td>
+          </tr>
+        {% endfor %}
+      {% endfor %}
+    </table>
+  {% endfor %}
+{% endblock %}
+
