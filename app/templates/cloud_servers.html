@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-  {{username}} <br>
+  <h1>{{username}} </h1>
 
   {% for server in servers %}
-    <table>
-      <tr> 
-        <td>Server Name</td><td>{{server.name}}</td>
+    <table class="table table-hover">
+      <tr class="active"> 
+        <th>Server Name</th><th>{{server.name}}</th>
       </tr>
       <tr>
         <td>Server ID</td><td>{{server.id}}</td>

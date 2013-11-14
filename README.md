@@ -14,5 +14,7 @@ Outputs:
 
   - Cloud Server List
     - Cloud Server Name
-    - Datacenter
-    - IP Address
+    - Cloud Server ID
+    - Public IPv4 Address
+    - Public IPv6 Address
+    - Private IPv4 address
